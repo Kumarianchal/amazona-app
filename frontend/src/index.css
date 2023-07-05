@@ -10,11 +10,14 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.site-container{
+  min-height: 100vh;
+}
 #root{
   height: 100%;
 }
 /*layout*/
-.grid-container{
+/* .grid-container{
   display:grid;
   grid-template-areas: 
   'header'
@@ -23,38 +26,32 @@ body{
    grid-template-columns: 1fr;
    grid-template-rows: 5rem 1fr 5rem;
    height: 100%;
-}
-header{
+} */
+/* header{
   grid-area: header;
   background-color: #203040;
-}
-main{
-  grid-area: main;
-  padding: rem;
-}
-footer{
+} */
+
+/* footer{
   grid-area:footer;
   background-color: #203040;
   color: #ffffff;
-}
+} */
 
 /*common*/
-a{
+/* a{
   text-decoration: none;
 }
 a:hover{
   color: #ff8000;
 }
-h1{
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
+
 h2{
   font-size: 1.6rem;
   padding: 1rem 0;
-}
-/*header*/
-header a{          /*all a tags inside header*/
+} */
+/*header
+header a{        
   color: #ffffff;
   padding: 1rem;
 }
@@ -63,34 +60,38 @@ a.brand{
   font-size: 3rem;
   font-weight: bold;
 }
-.row{
+*/
+main{
+  flex: 1;
+}
+.btn-primary{
+  background-color: #f0c040;
+  color: black;
+}
+.products{
   display:flex;
   flex-wrap: wrap;  /*to make responsive*/
-  justify-content: space-between;  /*to have max space between elements*/
-  align-items:center;
-}
-.row.center{
-  justify-content: center;
+  justify-content: center;  /*to have max space between elements*/
 }
 /*image*/
 img{
   border-radius: 0.5rem;
 }
-img.medium{
-  max-width: 29rem;
+.product img{
+  max-width: 400px;
   width: 100%;
 }
 /*card*/
-.card{
+.product{
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
   background-color: #f8f8f8;
   margin: 1rem;
 }
-.card-body{
+.product-info{
   padding: 1rem;
 }
-.card-body > *{      /*for all direct child of card-body class*/
+.product-info > *{      /*for all direct child of card-body class*/
   margin-bottom: 0.5rem;
 }
 .price{
@@ -100,4 +101,28 @@ img.medium{
 .rating span{
   color: #f0c040;
   margin: 0.1rem;
+}
+.rating span:last-child{
+  color: #404040;
+}
+.img-large{
+  max-width: 100%;
+}
+.img-thumbnail{
+  height: 80px;
+}
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+.small-container{
+  max-width: 600px;
+}
+.checkout-step > div{
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+.checkout-steps > div.active{
+  border-bottom : 0.2rem solid #f08000;
+  color: #f08000;
 }
